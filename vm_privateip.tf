@@ -58,7 +58,7 @@ resource "azurerm_network_interface" "myterraformnic1" {
     ip_configuration {
         name                          = "myNicConfiguration"
         subnet_id                     = azurerm_subnet.myterraformsubnet1.id
-        private_ip_address_allocation = "Static"
+        private_ip_address_allocation = "Dynamic"
     }
 
     tags = {
