@@ -7,14 +7,6 @@ resource "azurerm_resource_group" "myterraformgroup" {
     }
 }
 
-resource "azurerm_resource_group" "myterraformgroup1" {
-    name     = "myResourceGroup1"
-    location = "eastus"
-
-    tags = {
-        environment = "Terraform Demo"
-    }
-}
 
 resource "azurerm_virtual_network" "myterraformnetwork" {
     name                = "myVnet"
