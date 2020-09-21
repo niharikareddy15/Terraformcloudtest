@@ -71,8 +71,8 @@ resource "azurerm_network_interface_security_group_association" "example1" {
     network_security_group_id = azurerm_network_security_group.myterraformnsg1.id
 }
 
-resource "azurerm_virtual_machine" "main" {
-  name                  = "myVM"
+resource "azurerm_virtual_machine" "main1" {
+  name                  = "myVM1"
   location              = "eastus"
   resource_group_name   = azurerm_resource_group.myterraformgroup1.name
   network_interface_ids = [azurerm_network_interface.myterraformnic1.id]
