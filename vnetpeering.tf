@@ -11,4 +11,3 @@ resource "azurerm_virtual_network_peering" "example-2" {
   virtual_network_name      = azurerm_virtual_network.myterraformnetwork1.name
   remote_virtual_network_id = azurerm_virtual_network.myterraformnetwork.id
 }
-»
