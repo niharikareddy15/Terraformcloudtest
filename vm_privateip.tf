@@ -50,7 +50,7 @@ resource "azurerm_network_security_group" "myterraformnsg1" {
 }
 
 resource "azurerm_network_interface" "myterraformnic1" {
-    name                        = "myNIC"
+    name                        = "myNIC1"
     location                    = "eastus"
     resource_group_name         = azurerm_resource_group.myterraformgroup1.name
 
