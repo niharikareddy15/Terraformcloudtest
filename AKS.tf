@@ -5,8 +5,8 @@ resource "azurerm_resource_group" "rgaks" {
 
 resource "azurerm_kubernetes_cluster" "aks" {
   name                = "myAKS1505"
-  location            = azurerm_resource_group.aks.location
-  resource_group_name = azurerm_resource_group.aks.name
+  location            = azurerm_resource_group.rgaks.location
+  resource_group_name = azurerm_resource_group.rgaks.name
   dns_prefix          = "exampleAKS1505"
 
   default_node_pool {
