@@ -79,8 +79,8 @@ resource "azurerm_public_ip" "pip" {
 # Create an application gateway
 resource "azurerm_application_gateway" "gateway1" {
   name                = "my-application-gateway-12345"
-  resource_group_name = "azurerm_resource_group.myterraformgroup2.name"
-  location            = "azurerm_resource_group.myterraformgroup2.location"
+  resource_group_name = azurerm_resource_group.myterraformgroup2.name
+  location            = azurerm_resource_group.myterraformgroup2.location
 
   sku {
     name           = "Standard_Small"
