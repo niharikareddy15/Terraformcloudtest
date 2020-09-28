@@ -60,11 +60,11 @@ resource "azurerm_kubernetes_cluster" "aks1" {
   }
 }
 
-output "client_certificate" {
+output "client_certificate1" {
   value = azurerm_kubernetes_cluster.aks.kube_config.0.client_certificate
 }
 
-output "kube_config" {
+output "kube_config1" {
   value = azurerm_kubernetes_cluster.aks.kube_config_raw
 }
 
