@@ -72,7 +72,7 @@ resource "azurerm_public_ip" "pip" {
   name                         = "my-pip-12345"
   location                     = "${azurerm_resource_group.myterraformgroup2.location}"
   resource_group_name          = "${azurerm_resource_group.myterraformgroup2.name}"
-  public_ip_address_allocation = "dynamic"
+  allocation_method            = "Dynamic"
 }
 
 
