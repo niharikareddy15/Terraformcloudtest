@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "myterraformgroup2" {
 
 resource "azurerm_virtual_network" "myterraformnetwork2" {
     name                = "myVnetAKS"
-    address_space       = ["10.1.0.0/16"]
+    address_space       = ["10.0.0.0/16"]
     location            = "eastus"
     resource_group_name = azurerm_resource_group.myterraformgroup2.name
 
@@ -22,21 +22,21 @@ resource "azurerm_subnet" "myterraformsubnet2" {
     name                 = "mySubnet01"
     resource_group_name  = azurerm_resource_group.myterraformgroup2.name
     virtual_network_name = azurerm_virtual_network.myterraformnetwork2.name
-    address_prefixes       = ["10.1.1.0/24"]
+    address_prefixes       = ["10.0.1.0/24"]
 }
 
 resource "azurerm_subnet" "myterraformsubnet3" {
     name                 = "mySubnet02"
     resource_group_name  = azurerm_resource_group.myterraformgroup2.name
     virtual_network_name = azurerm_virtual_network.myterraformnetwork2.name
-    address_prefixes       = ["10.1.2.0/24"]
+    address_prefixes       = ["10.0.2.0/24"]
 }
 
 resource "azurerm_subnet" "myterraformsubnet4" {
     name                 = "mySubnet01"
     resource_group_name  = azurerm_resource_group.myterraformgroup2.name
     virtual_network_name = azurerm_virtual_network.myterraformnetwork2.name
-    address_prefixes     = ["10.3.0.0/24"]
+    address_prefixes     = ["10.0.3.0/24"]
 }
 
 resource "azurerm_kubernetes_cluster" "aks1" {
