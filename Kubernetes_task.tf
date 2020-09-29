@@ -33,7 +33,7 @@ resource "azurerm_subnet" "myterraformsubnet3" {
 }
 
 resource "azurerm_subnet" "myterraformsubnet4" {
-    name                 = "mySubnet01"
+    name                 = "mySubnet03"
     resource_group_name  = azurerm_resource_group.myterraformgroup2.name
     virtual_network_name = azurerm_virtual_network.myterraformnetwork2.name
     address_prefixes     = ["10.0.3.0/24"]
