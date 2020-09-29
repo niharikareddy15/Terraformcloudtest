@@ -40,7 +40,7 @@ resource "azurerm_subnet" "myterraformsubnet4" {
 }
 
 resource "azurerm_kubernetes_cluster" "aks01" {
-  name                = "myAKS15"
+  name                = "myAKS1510"
   location            = azurerm_resource_group.myterraformgroup2.location
   resource_group_name = azurerm_resource_group.myterraformgroup2.name
   dns_prefix          = "exampleAKS15"
