@@ -22,7 +22,7 @@ resource "azurerm_subnet" "myterraformsubnet2" {
     name                 = "mySubnet01"
     resource_group_name  = azurerm_resource_group.myterraformgroup2.name
     virtual_network_name = azurerm_virtual_network.myterraformnetwork2.name
-    address_prefixes       = ["10.0.1.0/24"]
+    address_prefixes     = ["10.0.1.0/24"]
 }
 
 resource "azurerm_subnet" "myterraformsubnet3" {
@@ -62,8 +62,8 @@ resource "azurerm_kubernetes_cluster" "aks01" {
 
 resource "azurerm_public_ip" "pip" {
   name                         = "my-pip-12345"
-  location                     = "${azurerm_resource_group.myterraformgroup2.location}"
-  resource_group_name          = "${azurerm_resource_group.myterraformgroup2.name}"
+  location                     = azurerm_resource_group.myterraformgroup2.location
+  resource_group_name          = azurerm_resource_group.myterraformgroup2.name
   allocation_method            = "Dynamic"
 }
 
