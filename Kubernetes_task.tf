@@ -60,14 +60,6 @@ resource "azurerm_kubernetes_cluster" "aks01" {
   }
 }
 
-output "client_certificate1" {
-  value = azurerm_kubernetes_cluster.aks.kube_config.0.client_certificate
-}
-
-output "kube_config1" {
-  value = azurerm_kubernetes_cluster.aks.kube_config_raw
-}
-
 resource "azurerm_public_ip" "pip" {
   name                         = "my-pip-12345"
   location                     = "${azurerm_resource_group.myterraformgroup2.location}"
