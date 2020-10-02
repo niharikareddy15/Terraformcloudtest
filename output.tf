@@ -1,4 +1,4 @@
-output "identity_resource_id" {
+/*output "identity_resource_id" {
     value = azurerm_user_assigned_identity.testIdentity.id
 }
 
