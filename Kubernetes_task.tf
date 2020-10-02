@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "myterraformgroup2" {
+/*resource "azurerm_resource_group" "myterraformgroup2" {
     name     = "KuberneteesTask"
     location = "eastus"
 
@@ -121,6 +121,6 @@ resource "azurerm_application_gateway" "gateway1" {
           backend_address_pool_name  = "${azurerm_virtual_network.myterraformnetwork2.name}-beap"
           backend_http_settings_name = "${azurerm_virtual_network.myterraformnetwork2.name}-be-htst"
   }
-}
+}*/
 
 
